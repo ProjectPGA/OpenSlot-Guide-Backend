@@ -6,7 +6,7 @@ const en = {
     },
     common: {
         components: {
-            lastReviewed: 'Última revisión en ',
+            lastReviewed: 'Last reviewed on ',
         },
     },
 };
