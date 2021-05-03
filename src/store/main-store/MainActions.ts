@@ -8,4 +8,12 @@ export default class MainActions extends Actions<
     MainGetters,
     MainMutations,
     MainActions
-> {}
+> {
+    public changeLanguageToSpanish(): void {
+        this.commit('changeLanguageToSpanish');
+    }
+
+    public changeLanguageToEnglish(): void {
+        this.commit('changeLanguageToEnglish');
+    }
+}
