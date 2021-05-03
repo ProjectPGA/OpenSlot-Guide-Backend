@@ -1,0 +1,19 @@
+$fallback-fonts: 'Poppins-Regular', BlinkMacSystemFont, -apple-system,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+// App Colors
+$primary: #303841;
+$secondary: #cccccc;
+$charcoal: #3a4750;
+$white: #ffffff;
+$winter-sky: #ff006e;
+
+// App gradient
+
+$whinter-sky-gradient: linear-gradient(
+    to bottom,
+    $primary 0%,
+    $primary 93%,
+    $winter-sky 100%
+);
