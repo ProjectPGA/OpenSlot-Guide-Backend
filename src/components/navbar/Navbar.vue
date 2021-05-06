@@ -1,14 +1,19 @@
 <template>
     <vs-navbar
         square
+        fixed
         center-collapsed
-        right-collapsed
         shadow
         v-model="active"
         class="navbar"
     >
         <template #left>
             <div class="navbar_left-container">
+                <box-icon
+                    v-if="$mq === 'sm' || $mq === 'md'"
+                    name="menu"
+                    size="sm"
+                ></box-icon>
                 <router-link to="/" class="navbar_left-container__logo">
                     <img
                         :src="
@@ -66,11 +71,14 @@ export default class Navbar extends Vue {
 .navbar {
     &_left-container {
         display: flex;
-        padding-top: 0.5rem;
+        align-items: center;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
 
         &__logo {
+            margin-left: 1rem;
+            margin-right: 1rem;
+
             display: flex;
             &-image {
                 height: 2.25rem;

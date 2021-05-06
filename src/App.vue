@@ -1,7 +1,10 @@
 <template>
     <div id="app">
         <navbar />
-        <router-view />
+        <sidebar />
+        <div class="main-info-container">
+            <router-view />
+        </div>
     </div>
 </template>
 
@@ -11,11 +14,13 @@ import { Component, Vue, Watch } from 'vue-property-decorator';
 import mainStore from '@/store/main-store/MainStore';
 
 import Navbar from '@/components/navbar/Navbar.vue';
+import Sidebar from '@/components/sidebar/Sidebar.vue';
 
 @Component({
     name: 'App',
     components: {
         Navbar,
+        Sidebar,
     },
 })
 export default class App extends Vue {
@@ -36,4 +41,11 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main-info-container {
+    margin-left: 16rem;
+    @include touch {
+        margin-left: 0;
+    }
+}
+</style>
