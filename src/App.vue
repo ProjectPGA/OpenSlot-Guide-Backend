@@ -2,9 +2,7 @@
     <div id="app">
         <navbar />
         <sidebar />
-        <div class="main-info-container">
-            <router-view />
-        </div>
+        <router-view class="main-info-container" />
     </div>
 </template>
 
@@ -44,8 +42,13 @@ export default class App extends Vue {
 <style lang="scss" scoped>
 .main-info-container {
     margin-left: 16rem;
+    background-color: white;
+    padding: 1.5rem 14rem 1.5rem 1.5rem;
+    height: 100vh;
+
     @include touch {
         margin-left: 0;
+        height: initial;
     }
 }
 </style>

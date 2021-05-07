@@ -9,4 +9,8 @@ export default class MainMutations extends Mutations<MainState> {
     public changeLanguageToEnglish(): void {
         this.state.currentLanguage = 'en';
     }
+
+    public toggleSidebar(): void {
+        this.state.isSidebarShown = !this.state.isSidebarShown;
+    }
 }

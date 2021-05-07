@@ -19,9 +19,13 @@ a {
 }
 
 // Navbar
-.vs-navbar__center:first-child {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.vs-navbar__center {
+    font-size: 1.25rem;
+
+    &:first-child {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 // Sidebar
@@ -51,7 +55,17 @@ a {
 }
 
 // Button
+.vs-button {
+    &--flat {
+        &:hover {
+            background: none;
+        }
+        &:focus {
+            background: none;
+        }
+    }
 
-.vs-button--flat:hover {
-    background-color: inherit;
+    &--icon .vs-button__content {
+        padding: 0;
+    }
 }

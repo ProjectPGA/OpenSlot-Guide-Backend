@@ -1,13 +1,17 @@
 const es = {
     sections: {
         intro: 'Introducción',
-        api: 'REST API',
+        api: 'API REST',
         expressjs: 'Express JS',
+        mongoosejs: 'Mongoose',
     },
     common: {
         components: {
             lastReviewed: 'Última revisión en ',
         },
+    },
+    titles: {
+        backendStandars: 'Estándares Backend',
     },
 };
 
