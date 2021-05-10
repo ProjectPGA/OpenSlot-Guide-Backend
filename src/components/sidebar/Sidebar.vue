@@ -2,12 +2,8 @@
     <vs-sidebar
         square
         v-model="active"
-        :open="
-            this.$mq === 'md' ||
-            this.$mq === 'lg' ||
-            this.$mq === 'xl' ||
-            isSidebarShown
-        "
+        v-click-outside="closeSidebar"
+        :open="desktopMediaQuerys ? desktopMediaQuerys : isSidebarShown"
     >
         <vs-sidebar-group>
             <template #header>
@@ -74,6 +70,9 @@ import mainStore from '@/store/main-store/MainStore';
 })
 export default class Sidebar extends Vue {
     @Prop(Array) private documentationTitles: DocumentationTitle[];
+    @Prop(String) private navbarToggleButtonId: string;
+
+    private active: string = 'home';
 
     private mainStore = mainStore.context(this.$store);
 
@@ -81,7 +80,22 @@ export default class Sidebar extends Vue {
         return this.mainStore.state.isSidebarShown;
     }
 
-    private active: string = 'home';
+    private get currentMediaQuery(): string {
+        // @ts-ignore
+        return this.$mq;
+    }
+
+    private get desktopMediaQuerys(): boolean {
+        return (
+            this.currentMediaQuery === 'xl' || this.currentMediaQuery === 'lg'
+        );
+    }
+
+    private closeSidebar(event: any): void {
+        event.target.id === this.navbarToggleButtonId || this.desktopMediaQuerys
+            ? null
+            : this.mainStore.actions.closeSidebar();
+    }
 }
 </script>
 <style lang="scss" scoped></style>

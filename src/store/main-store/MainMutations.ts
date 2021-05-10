@@ -13,4 +13,8 @@ export default class MainMutations extends Mutations<MainState> {
     public toggleSidebar(): void {
         this.state.isSidebarShown = !this.state.isSidebarShown;
     }
+
+    public closeSidebar(): void {
+        this.state.isSidebarShown = false;
+    }
 }

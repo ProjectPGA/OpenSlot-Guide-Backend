@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <navbar />
-        <sidebar />
+        <navbar navbarToggleButtonId="navbarToggleButtonId" />
+        <sidebar navbarToggleButtonId="navbarToggleButtonId" />
         <router-view class="main-info-container" />
     </div>
 </template>
@@ -49,6 +49,7 @@ export default class App extends Vue {
     @include touch {
         margin-left: 0;
         height: initial;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 }
 </style>

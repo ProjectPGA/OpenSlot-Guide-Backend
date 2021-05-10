@@ -4,7 +4,8 @@
             <div class="navbar_left-container">
                 <vs-button transparent flat icon @click="toggleSidebar">
                     <box-icon
-                        v-if="$mq === 'sm' || $mq === 'md'"
+                        v-if="isCurrentMediaQueryTouch"
+                        :id="navbarToggleButtonId"
                         name="menu"
                         size="sm"
                     ></box-icon>
@@ -31,7 +32,7 @@
     </vs-navbar>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import mainStore from '@/store/main-store/MainStore';
 
@@ -46,6 +47,8 @@ import TranslationButton from '@/components/common/TranslationButton.vue';
     },
 })
 export default class Navbar extends Vue {
+    @Prop(String) private navbarToggleButtonId: string;
+
     private mainStore = mainStore.context(this.$store);
 
     private toggleSidebar(): void {
@@ -53,6 +56,11 @@ export default class Navbar extends Vue {
     }
     private get currentLanguage(): string | null {
         return this.mainStore.state.currentLanguage;
+    }
+
+    public get isCurrentMediaQueryTouch(): string {
+        // @ts-ignore
+        return this.$mq === 'sm' || this.$mq === 'md';
     }
 }
 </script>

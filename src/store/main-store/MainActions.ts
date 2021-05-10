@@ -20,4 +20,8 @@ export default class MainActions extends Actions<
     public toggleSidebar(): void {
         this.commit('toggleSidebar');
     }
+
+    public closeSidebar(): void {
+        this.commit('closeSidebar');
+    }
 }

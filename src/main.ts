@@ -11,6 +11,7 @@ import 'vuesax/dist/vuesax.css';
 import './styles/main.scss';
 
 import VueMq from 'vue-mq';
+import vClickOutside from 'v-click-outside';
 import axios from 'axios';
 import i18n from '@/localization/localization';
 
@@ -25,12 +26,13 @@ Vue.use(Vuesax);
 Vue.use(VueMq, {
     breakpoints: {
         [Device.sm]: 769,
-        [Device.md]: 1024,
+        [Device.md]: 1025,
         [Device.lg]: 1216,
         [Device.xl]: 1408,
     },
     defaultBreakpoint: 'sm',
 });
+Vue.use(vClickOutside);
 
 new Vue({
     router,
