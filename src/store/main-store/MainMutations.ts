@@ -17,4 +17,7 @@ export default class MainMutations extends Mutations<MainState> {
     public closeSidebar(): void {
         this.state.isSidebarShown = false;
     }
+    public changeCurrentSection(currentSection: string): void {
+        this.state.activeAsideContentItem = currentSection;
+    }
 }

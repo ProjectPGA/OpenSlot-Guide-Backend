@@ -24,4 +24,8 @@ export default class MainActions extends Actions<
     public closeSidebar(): void {
         this.commit('closeSidebar');
     }
+
+    public changeCurrentSection(currentSection: string): void {
+        this.commit('changeCurrentSection', currentSection);
+    }
 }
