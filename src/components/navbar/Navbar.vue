@@ -90,7 +90,7 @@ export default class Navbar extends Vue {
     }
     &_right-container {
         display: flex;
-        align-items: baseline;
+        align-items: center;
 
         &__language {
             text-transform: uppercase;
