@@ -6,9 +6,12 @@
                 AsideContentItem.id === activeAsideContentItem,
         }"
     >
-        <a href="" :title="AsideContentItem.translationText">{{
-            AsideContentItem.translationText
-        }}</a>
+        <a
+            :href="`#${AsideContentItem.id}`"
+            :title="AsideContentItem.translationText"
+            @click="changeCurrentSection(AsideContentItem.id)"
+            >{{ AsideContentItem.translationText }}</a
+        >
     </li>
 </template>
 <script lang="ts">
@@ -29,6 +32,10 @@ export default class ContentAsideItem extends Vue {
 
     private get activeAsideContentItem(): string {
         return this.mainStore.state.activeAsideContentItem;
+    }
+
+    private changeCurrentSection(currentSection: string) {
+        this.mainStore.actions.changeCurrentSection(currentSection);
     }
 }
 </script>

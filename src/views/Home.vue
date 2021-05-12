@@ -5,7 +5,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="default">
                 <h3>Default <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -29,7 +29,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="group">
                 <h3>Group <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -49,7 +49,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="reduce">
                 <h3>Reduce <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -71,7 +71,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="hoverExpand">
                 <h3>Hover expand <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -93,7 +93,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="querysNomenclature">
                 <h3>Querys nomenclature examples <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -115,7 +115,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="open">
                 <h3>Open <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -137,7 +137,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="positionRight">
                 <h3>Position Right <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -159,7 +159,7 @@
             :threshold="[threshold]"
             :rootMargin="rootMargin"
         >
-            <div class="title">
+            <div class="title" id="api">
                 <h3>API <i>#</i></h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -199,7 +199,6 @@ export default class Home extends Vue {
     private rootMargin: string = '0px 0px -50px 0px';
 
     private changeCurrentSection(currentSection: string) {
-        console.log(currentSection);
         this.mainStore.actions.changeCurrentSection(currentSection);
     }
 }
