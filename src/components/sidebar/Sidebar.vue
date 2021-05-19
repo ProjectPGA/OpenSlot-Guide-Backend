@@ -60,8 +60,6 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-import { DocumentationTitle } from '@/models/documentation/Documentation';
-
 import mainStore from '@/store/main-store/MainStore';
 
 @Component({
@@ -69,7 +67,6 @@ import mainStore from '@/store/main-store/MainStore';
     components: {},
 })
 export default class Sidebar extends Vue {
-    @Prop(Array) private documentationTitles: DocumentationTitle[];
     @Prop(String) private navbarToggleButtonId: string;
 
     private active: string = 'home';
