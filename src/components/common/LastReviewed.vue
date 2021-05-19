@@ -1,10 +1,9 @@
 <template>
     <vs-tooltip bottom>
         {{ lastVersion }}
-        <template #tooltip
-            >{{ $t('common.components.lastReviewed')
-            }}{{ lastReviewed }}</template
-        >
+        <template #tooltip>
+            {{ $t('common.components.lastReviewed') }}{{ lastReviewed }}
+        </template>
     </vs-tooltip>
 </template>
 <script lang="ts">

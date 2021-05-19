@@ -1,7 +1,7 @@
 <template>
-    <vs-button active class="translation-button" @click="toggleLanguage">{{
-        currentLanguage
-    }}</vs-button>
+    <vs-button active class="translation-button" @click="toggleLanguage">
+        {{ currentLanguage }}
+    </vs-button>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
