@@ -9,7 +9,7 @@
 
 // Common
 body {
-    font-family: 'Poppins-Regular';
+    font-family: $fallback-fonts;
     background-color: $aqua-haze;
 }
 a {
