@@ -1,3 +1,30 @@
+// Colors
+:root {
+    --vs-primary: 0, 0, 0;
+    --vs-success: 23, 201, 100;
+    --vs-danger: 242, 19, 93;
+    --vs-warn: 254, 130, 0;
+    --vs-dark: 36, 33, 69;
+}
+
+// Common
 body {
-    font-family: 'Poppins-Regular';
+    font-family: $fallback-fonts;
+    background-color: $aqua-haze;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+// Navbar
+.vs-navbar__center:first-child {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+// Tooltip
+
+.vs-tooltip-content {
+    cursor: pointer;
 }
