@@ -16,4 +16,12 @@ export default class MainActions extends Actions<
     public changeLanguageToEnglish(): void {
         this.commit('changeLanguageToEnglish');
     }
+
+    public toggleSidebar(): void {
+        this.commit('toggleSidebar');
+    }
+
+    public closeSidebar(): void {
+        this.commit('closeSidebar');
+    }
 }

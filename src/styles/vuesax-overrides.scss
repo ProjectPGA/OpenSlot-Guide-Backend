@@ -11,6 +11,7 @@
 body {
     font-family: $fallback-fonts;
     background-color: $aqua-haze;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -18,13 +19,57 @@ a {
 }
 
 // Navbar
-.vs-navbar__center:first-child {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.vs-navbar__center {
+    font-size: 1.25rem;
+
+    &:first-child {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+// Sidebar
+.vs-sidebar-content {
+    top: 3.25rem;
+    -webkit-box-shadow: 0px 15px 25px 5px
+        rgba(0, 0, 0, var(--vs-shadow-opacity));
+    box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, var(--vs-shadow-opacity));
+}
+
+.vs-sidebar__item:after {
+    border-radius: 0;
+    width: 8px;
+}
+
+.vs-sidebar__group.open .vs-sidebar__group__content:after {
+    border-radius: 0;
+}
+
+.vs-sidebar__group > .vs-sidebar__group__header .vs-sidebar__item:hover {
+    padding-left: 14px;
 }
 
 // Tooltip
-
 .vs-tooltip-content {
     cursor: pointer;
+}
+
+// Button
+.vs-button {
+    &--flat {
+        &:hover {
+            background: none;
+        }
+        &:focus {
+            background: none;
+        }
+    }
+
+    &--icon .vs-button__content {
+        padding: 0;
+    }
+}
+
+.vs-button--default.vs-button--active {
+    transform: initial;
 }
